@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "de85df8a-a965-4da6-94da-9b79458344d7",
+		"name": "kiriya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Yudit\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Yudit\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODU1MjA4fQ.ZURgP2K9ItnMaz_gP5KNGYoIJ1hSgG9G38QN_JXrj-0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Yudit\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/auth/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "board",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYxNjM5fQ.l7lZvxOvV_wd-Fd49JN1Xyl5Z9ShZyEK3pON5NB8mug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"TO DO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/board/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"board",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update board",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYyNzgwfQ.ZDceAA49B4m3u0tiaNaNPLMki3JKM0UhMiuJRSLGQHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Doing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/board/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"board",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "boards",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYxNjM5fQ.l7lZvxOvV_wd-Fd49JN1Xyl5Z9ShZyEK3pON5NB8mug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"TO DO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/board/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"board",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail board",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYyMjU3fQ.5g_T350GgW40mkPQehj5DZQ15YpqFLwRo2wwp20bZEM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"TO DO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/board/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"board",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete board",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYxNjM5fQ.l7lZvxOvV_wd-Fd49JN1Xyl5Z9ShZyEK3pON5NB8mug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/board/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"board",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYxNjM5fQ.l7lZvxOvV_wd-Fd49JN1Xyl5Z9ShZyEK3pON5NB8mug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\" : \"Buat fitur login\",\r\n    \"user_activity_id\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/task/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYxNjM5fQ.l7lZvxOvV_wd-Fd49JN1Xyl5Z9ShZyEK3pON5NB8mug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\" : \"Buat fitur login\",\r\n    \"user_activity_id\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/task/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list all task by user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYxNjM5fQ.l7lZvxOvV_wd-Fd49JN1Xyl5Z9ShZyEK3pON5NB8mug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/task/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list-task-per-board",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYxNjM5fQ.l7lZvxOvV_wd-Fd49JN1Xyl5Z9ShZyEK3pON5NB8mug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/task/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYxNjM5fQ.l7lZvxOvV_wd-Fd49JN1Xyl5Z9ShZyEK3pON5NB8mug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/task/4/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"4",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJZdWRpdCIsInBhc3N3b3JkIjoiJDJiJDEwJEx0YzdNVXQ4c0EwT01reExJLnlGM08zWWdpd0dtdzEyU2FZbm82bk9yMnV2VlpVbWM0aFI2IiwiaWF0IjoxNjM3ODYxNjM5fQ.l7lZvxOvV_wd-Fd49JN1Xyl5Z9ShZyEK3pON5NB8mug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/task/4/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"4",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
