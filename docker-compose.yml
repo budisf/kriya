@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+       - ./pgdata:/var/lib/postgresql/data
+    ports :
+       - "5432:5432"
+  web:
+    image: node_express
+    depends_on:
+      - db
+    ports:
+      - "4000:4000"
